@@ -1,0 +1,130 @@
+/* back-img */
+
+.background-container {
+  background-image: url("/src/assets/img2.jpeg");
+  background-size: cover;
+  background-position: center;
+  /* width: 100vw; */
+  height: 412.08px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  text-align: center;
+  width: 100%;
+}
+
+.text-overlay {
+  padding: 20px 100px;
+
+  text-align: center;
+  font-weight: 300;
+  line-height: 60.9px;
+  width: 100%;
+
+  color: #333333;
+}
+
+.text-overlay h1 span {
+  color: #d89701;
+  font-size: 43.5;
+  font-weight: 500;
+  line-height: 60.9px;
+}
+
+.text-overlay .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.text-overlay ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.text-overlay li {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.text-overlay select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.text-overlay ul li button {
+  padding: 14px 20px;
+  width: 85%;
+  background-color: #d89701;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.text-overlay button:hover {
+  background-color: rgb(218, 144, 64);
+}
+
+@media (max-width: 768px) {
+  .background-container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .text-overlay {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .text-overlay h1 {
+    font-size: 28px;
+  }
+
+  .text-overlay .boxes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-overlay select {
+    width: 100%;
+    /* padding: 10px;  */
+  }
+
+  .text-overlay button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay h1 {
+    font-size: 24px;
+  }
+  .background-container {
+    height: auto;
+    padding: 0;
+  }
+}
