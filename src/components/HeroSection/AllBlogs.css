@@ -1,0 +1,22 @@
+.Blog-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  padding: 20px;
+   
+  }
+  
+  .Blog-button button {
+    width: 142px;
+    height: 42px;
+    background-color: #D89701;
+    border: none;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  
+  

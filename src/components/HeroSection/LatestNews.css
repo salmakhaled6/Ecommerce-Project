@@ -1,0 +1,102 @@
+.Latest-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.Carousel {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.Latest-news h2 {
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 40.6px;
+  color: #333333;
+  margin-bottom: 0;
+}
+
+.p1 {
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 23.2px;
+  color: #878787;
+  font-style: italic;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 34px;
+  overflow: hidden;
+}
+
+.card-item {
+  list-style: none;
+  text-align: center;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-img {
+  width: 260px;
+  height: 325px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.badge {
+  color: #bababa;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.8px;
+}
+
+.card-title-1 {
+  font-size: 20px !important;
+  font-weight: 500;
+  color: #333333;
+}
+
+@media (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .Latest-news {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}

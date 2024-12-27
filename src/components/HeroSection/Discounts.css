@@ -1,0 +1,122 @@
+.discount-container {
+  background-image: url("https://s3-alpha-sig.figma.com/img/410f/f1c1/6a781842b46d7673a63cdf27c3a06eac?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E6v80tWoxEACnvkP4SpIkltF877Enoq1lB-Kv5-RJ0nR6Kqt1FlQ5huvhhcgoEAhiLxSb-o0BGkdIbB04NKq-S1iQg2OHsEKMw~-P3VjAeQ2BuGFK67~zKXSEmYf8xG8pwXLHSnPzKX~JHoUJ0o7N0tlewtVT2Wu4u3igU3MqfGUZqGF5tUipYZnzLjWyLTjykD7a-Ja0higJ6fQUlmrD~5F~of1NpJ8Z6AwojV~l53-TrQ3EvlhvRSNakzPosEzm3jJLiDhEiAXZCGQQL3IChNfek2hyS3PPbUW0t5jcYxlZ22p2jtiECvNVvBntgg8~jMxsWg7jsXGPdWEW4tmtA__");
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  padding: 20px;
+}
+
+.discount-items {
+  max-width: 430px;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333333;
+}
+
+.discount-items button {
+  background-color: #d89701;
+  width: 143px;
+  height: 42px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.discount-items button:hover {
+  background-color: #c18701;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 55px;
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-upper {
+  background-color: #f1f1f1;
+  color: #000000;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.card-lower {
+  color: #333333;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13.7px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .discount-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 80px;
+    height: 100px;
+  }
+
+  .card-upper {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .card-lower {
+    font-size: 12px;
+  }
+
+  .discount-items {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 70px;
+    height: 90px;
+  }
+
+  .card-upper {
+    font-size: 12px;
+  }
+
+  .card-lower {
+    font-size: 11px;
+  }
+
+  .discount-items button {
+    width: 120px;
+    height: 35px;
+    font-size: 10px;
+  }
+}

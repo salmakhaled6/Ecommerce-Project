@@ -1,0 +1,130 @@
+/* back-img */
+
+.background-container {
+  background-image: url("/src/assets/img2.jpeg");
+  background-size: cover;
+  background-position: center;
+  /* width: 100vw; */
+  height: 412.08px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  text-align: center;
+  padding: 20px;
+}
+/* .background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0; */
+
+.text-overlay {
+  text-align: center;
+  font-weight: 300;
+  line-height: 60.9px;
+  /* font-family: 'poppins' !important; */
+
+  color: #333333;
+}
+
+.text-overlay h1 span {
+  color: #d89701;
+  font-size: 43.5;
+  font-weight: 500;
+  line-height: 60.9px;
+  /* font-family: 'poppins' !important; */
+}
+
+.text-overlay .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.text-overlay ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.text-overlay li {
+  list-style: none;
+}
+
+.text-overlay select {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  font-size: 14.5px;
+  line-height: 40px;
+  font-weight: 400;
+  /* font-family: 'poppins' !important; */
+}
+
+.text-overlay button {
+  padding: 10px 20px;
+  background-color: #d89701;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 185px;
+  height: 42px;
+  border-radius: 5px;
+
+  /* font-family: 'poppins' !important; */
+}
+
+.text-overlay button:hover {
+  background-color: rgb(218, 144, 64);
+}
+
+@media (max-width: 768px) {
+  .background-container {
+    height: auto;
+  }
+
+  .text-overlay {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .text-overlay h1 {
+    font-size: 28px;
+  }
+
+  .text-overlay .boxes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-overlay select {
+    width: 100%;
+    /* padding: 10px;  */
+  }
+
+  .text-overlay button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay h1 {
+    font-size: 24px;
+  }
+}
