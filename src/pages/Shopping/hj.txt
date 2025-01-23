@@ -1,0 +1,69 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import React from "react";
+
+const styles = {
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "20px",
+    justifyContent: "center",
+    padding: "20px",
+  },
+  card: {
+    border: "1px solid #ccc",
+    borderRadius: "8px",
+    padding: "16px",
+    width: "300px",
+    textAlign: "center",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    height: "400px",
+  },
+  image: {
+    width: "100%",
+    height: "150px",
+    objectFit: "cover",
+    marginBottom: "10px",
+    transition: "transform 0.3s ease", // Optional: Smooth transition
+  },
+};
+
+function ShoppingList() {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/photos") // Replace with any fake API
+      .then((response) => {
+        // Limit to the first 10 items for better performance
+        const limitedData = response.data.slice(0, 10).map((item) => ({
+          ...item,
+          hoverUrl: item.url, // Simulate a second image for hover
+        }));
+        setCards(limitedData);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  return (
+    <div className="card-container" style={styles.container}>
+      {cards.map((card) => (
+        <div key={card.id} className="card" style={styles.card}>
+          <img
+            src={card.thumbnailUrl}
+            alt={card.title}
+            style={styles.image}
+            onMouseOver={(e) => (e.target.src = card.hoverUrl)} // Change image on hover
+            onMouseOut={(e) => (e.target.src = card.thumbnailUrl)} // Revert image on mouse out
+          />
+          <h3>{card.title}</h3>
+          <p><b>Price:</b> ${(card.id * 5).toFixed(2)}</p> {/* Simulate a price */}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default ShoppingList;
